@@ -32,13 +32,13 @@
   }
 
   let navigating = false;
-  beforeNavigate(() => {
-    console.log("BEFORE");
+  beforeNavigate(({ type }) => {
+    console.log("BEFORE", type);
     navigating = true;
   });
 
-  afterNavigate(() => {
-    console.log("AFTER");
+  afterNavigate(({ type }) => {
+    console.log("AFTER", type);
     navigating = false;
   });
 </script>
