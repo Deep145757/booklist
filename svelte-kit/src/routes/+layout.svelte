@@ -33,10 +33,12 @@
 
   let navigating = false;
   beforeNavigate(() => {
+    console.log("BEFORE");
     navigating = true;
   });
 
   afterNavigate(() => {
+    console.log("AFTER");
     navigating = false;
   });
 </script>
